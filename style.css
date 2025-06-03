@@ -1,0 +1,315 @@
+/* ===== Global Reset & Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f5f5f5; /* Default text color white */
+}
+
+body {
+  background-color: #0a0a0a; /* uniform black background */
+  line-height: 1.6;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #1a1a1a, #121212);
+  padding: 1rem 2rem;
+  box-shadow: 0 0 10px #ff004f88;
+}
+
+/* Logo styles by page */
+body.index-page .navbar .logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #ff66cc; /* purple-pink */
+  text-shadow: 0 0 8px #ff66cc;
+  transition: color 0.3s;
+}
+body.index-page .navbar .logo:hover {
+  color: #66ccff; /* subtle blue */
+  text-shadow: 0 0 12px #66ccff;
+}
+
+body.gaming-page .navbar .logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #ff004f; /* red */
+  text-shadow: 0 0 8px #ff004f;
+  transition: color 0.3s;
+}
+body.gaming-page .navbar .logo:hover {
+  color: #4a90e2; /* blue */
+  text-shadow: 0 0 12px #4a90e2;
+}
+
+body.gamingbase-page .navbar .logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #5c8cff; /* blue */
+  text-shadow: 0 0 8px #5c8cff;
+  transition: color 0.3s;
+}
+body.gamingbase-page .navbar .logo:hover {
+  color: #ff004f; /* red */
+  text-shadow: 0 0 12px #ff004f;
+}
+
+/* ===== Nav links ===== */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+/* Make nav links white by default */
+.nav-links a {
+  color: #f5f5f5;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s;
+}
+
+/* Nav links color & underline by page */
+body.index-page .nav-links a {
+  color: #f5f5f5; /* white base */
+}
+body.index-page .nav-links a:hover {
+  color: #ff66cc; /* minimal pink on hover */
+}
+body.index-page .nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ff66cc; /* minimal pink underline */
+  transition: width 0.3s, background 0.3s;
+}
+body.index-page .nav-links a:hover::after {
+  width: 100%;
+  background: #ff66cc;
+}
+
+body.gaming-page .nav-links a {
+  color: #f5f5f5; /* keep links white base */
+}
+body.gaming-page .nav-links a:hover {
+  color: #ff004f; /* minimal red on hover */
+}
+body.gaming-page .nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ff004f; /* minimal red underline */
+  transition: width 0.3s, background 0.3s;
+}
+body.gaming-page .nav-links a:hover::after {
+  width: 100%;
+  background: #ff004f;
+}
+
+body.gamingbase-page .nav-links a {
+  color: #5c8cff; /* blue base */
+}
+body.gamingbase-page .nav-links a:hover {
+  color: #ff004f; /* red hover */
+}
+body.gamingbase-page .nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #5c8cff;
+  transition: width 0.3s, background 0.3s;
+}
+body.gamingbase-page .nav-links a:hover::after {
+  width: 100%;
+  background: #ff004f;
+}
+
+/* ===== Headings ===== */
+h2 {
+  margin-bottom: 1.5rem;
+  color: #f5f5f5; /* Default white */
+}
+
+body.index-page h2 {
+  color: #ff66cc;
+  text-shadow: 0 0 8px #ff66cc;
+}
+
+body.gaming-page h2 {
+  color: #ff004f;
+  text-shadow: 0 0 8px #ff004f;
+}
+
+body.gamingbase-page h2 {
+  color: #5c8cff;
+  text-shadow: 0 0 8px #5c8cff;
+}
+
+/* ===== Cards ===== */
+.card {
+  background-color: #1a1a1a;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 0 15px transparent;
+  transition: box-shadow 0.3s;
+  color: #f5f5f5; /* white text */
+}
+
+body.index-page .card {
+  box-shadow: 0 0 15px #ff66cc88;
+}
+body.gaming-page .card {
+  box-shadow: 0 0 15px #ff004f88;
+}
+body.gamingbase-page .card {
+  box-shadow: 0 0 15px #5c8cff88;
+}
+
+/* Hover effect on cards */
+body.index-page .card:hover {
+  box-shadow: 0 0 20px #ff66ccaa;
+  color: #ff66cc; /* subtle pink text on hover */
+}
+body.gaming-page .card:hover {
+  box-shadow: 0 0 20px #ff004fdd;
+  color: #ff004f; /* subtle red text on hover */
+}
+body.gamingbase-page .card:hover {
+  box-shadow: 0 0 20px #5c8cffdd;
+  color: #5c8cff; /* subtle blue text on hover */
+}
+
+/* ===== Text colors & FAQ ===== */
+body.gaming-page p,
+body.gaming-page .faq summary,
+body.gaming-page .faq details {
+  color: #f5f5f5; /* white base */
+  transition: color 0.3s;
+}
+body.gaming-page p:hover,
+body.gaming-page .faq summary:hover {
+  color: #ff004f; /* minimal red hover */
+}
+
+body.gamingbase-page p,
+body.gamingbase-page .faq summary,
+body.gamingbase-page .faq details {
+  color: #5c8cff;
+  transition: color 0.3s;
+}
+body.gamingbase-page p:hover,
+body.gamingbase-page .faq summary:hover {
+  color: #ff004f;
+}
+
+/* Links inside paragraphs */
+a {
+  color: #f5f5f5; /* white base */
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+body.index-page a {
+  color: #ff66cc; /* pink links */
+}
+body.index-page a:hover {
+  color: #66ccff; /* subtle blue on hover */
+}
+
+body.gaming-page a {
+  color: #ff004f; /* red links */
+}
+body.gaming-page a:hover {
+  color: #4a90e2; /* blue hover */
+}
+
+body.gamingbase-page a {
+  color: #5c8cff; /* blue links */
+}
+body.gamingbase-page a:hover {
+  color: #ff004f; /* red hover */
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #111;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+footer p {
+  color: #ff004f;
+  transition: color 0.3s;
+  text-shadow: 0 0 6px #ff004f;
+}
+footer p:hover {
+  color: #4a90e2;
+  text-shadow: 0 0 12px #4a90e2;
+}
+
+/* ===== Images ===== */
+img {
+  max-width: 100px;
+  height: auto;
+  transition: transform 0.3s;
+  border-radius: 8px;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Gallery Grid for Gaming Base Page ===== */
+body.gamingbase-page .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 2rem;
+  max-width: 1100px;
+  margin: 0 auto 3rem auto;
+}
+
+body.gamingbase-page .gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #5c8cffaa;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+body.gamingbase-page .gallery-grid img:hover {
+  box-shadow: 0 0 15px #ff004fdd;
+  transform: scale(1.05);
+}
+
+/* ===== Misc Helpers ===== */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
